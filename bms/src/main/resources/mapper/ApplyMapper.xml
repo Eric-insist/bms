@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bms.dao.ApplyMapper" >
+  <resultMap id="BaseResultMap" type="com.bms.model.Apply" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="apply_time" property="applyTime" jdbcType="TIMESTAMP" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="room_no" property="roomNo" jdbcType="VARCHAR" />
+    <result column="tower_no" property="towerNo" jdbcType="INTEGER" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="new_room_no" property="newRoomNo" jdbcType="VARCHAR" />
+    <result column="submit_time" property="submitTime" jdbcType="TIMESTAMP" />
+    <result column="result" property="result" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, user_name, type, apply_time, state,room_no, tower_no, description, new_room_no,
+    submit_time,result
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_apply
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_apply
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bms.model.Apply" >
+    insert into t_apply (id, user_id, user_name, 
+      type, apply_time,state, room_no,
+      tower_no, description, new_room_no,
+      submit_time,result)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, 
+      #{type,jdbcType=INTEGER}, #{applyTime,jdbcType=TIMESTAMP},#{state,jdbcType=INTEGER}, #{roomNo,jdbcType=VARCHAR},
+      #{towerNo,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, #{newRoomNo,jdbcType=VARCHAR},
+      #{submitTime,jdbcType=TIMESTAMP},#{result,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bms.model.Apply" >
+    insert into t_apply
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="applyTime != null" >
+        apply_time,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="roomNo != null" >
+        room_no,
+      </if>
+      <if test="towerNo != null" >
+        tower_no,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="newRoomNo != null" >
+        new_room_no,
+      </if>
+      <if test="submitTime != null" >
+        submit_time,
+      </if>
+      <if test="result != null" >
+        result,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="applyTime != null" >
+        #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="roomNo != null" >
+        #{roomNo,jdbcType=VARCHAR},
+      </if>
+      <if test="towerNo != null" >
+        #{towerNo,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="newRoomNo != null" >
+        #{newRoomNo,jdbcType=VARCHAR},
+      </if>
+      <if test="submitTime != null" >
+        #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="result != null" >
+        #{result,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bms.model.Apply" >
+    update t_apply
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="applyTime != null" >
+        apply_time = #{applyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="roomNo != null" >
+        room_no = #{roomNo,jdbcType=VARCHAR},
+      </if>
+      <if test="towerNo != null" >
+        tower_no = #{towerNo,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="newRoomNo != null" >
+        new_room_no = #{newRoomNo,jdbcType=VARCHAR},
+      </if>
+      <if test="submitTime != null" >
+        submit_time = #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="result != null" >
+        result = #{result,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bms.model.Apply" >
+    update t_apply
+    set user_id = #{userId,jdbcType=INTEGER},
+      user_name = #{userName,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      apply_time = #{applyTime,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=INTEGER},
+      room_no = #{roomNo,jdbcType=VARCHAR},
+      tower_no = #{towerNo,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR},
+      new_room_no = #{newRoomNo,jdbcType=VARCHAR},
+      submit_time = #{submitTime,jdbcType=TIMESTAMP},
+      result = #{result,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="findAll" parameterType="com.bms.query.ApplyQuery" resultMap="BaseResultMap">
+    select * from t_apply
+    <where>
+      <if test="userId != null and userId != ''">
+        user_id = #{userId,jdbcType=INTEGER}
+      </if>
+      <if test="type != null">
+        and type = #{type,jdbcType=INTEGER}
+      </if>
+      <if test="towerNo != null">
+        and tower_no = #{towerNo,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by state, apply_time desc
+    <if test="pageSize != null and pageStart != null">
+      limit #{pageStart,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+    </if>
+  </select>
+
+  <select id="countAll" parameterType="com.bms.query.ApplyQuery" resultType="java.lang.Integer">
+    select count(id) from t_apply
+    <where>
+      <if test="userId != null and userId != ''">
+        user_id = #{userId,jdbcType=INTEGER}
+      </if>
+      <if test="type != null">
+        and type = #{type,jdbcType=INTEGER}
+      </if>
+      <if test="towerNo != null">
+        and tower_no = #{towerNo,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+
+  <select id="findApplyAll" parameterType="com.bms.query.ApplyQuery" resultMap="BaseResultMap">
+    select * from t_apply
+    <where>
+      <if test="towerNo != null">
+        tower_no = #{towerNo,jdbcType=INTEGER}
+      </if>
+      <if test="userName != null">
+       and user_name like concat('%',#{userName,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="roomNo != null">
+       and room_no like concat('%',#{roomNo,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="type != null">
+        and type = #{type,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by state, apply_time desc
+    <if test="pageSize != null and pageStart != null">
+      limit #{pageStart,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+    </if>
+  </select>
+
+  <select id="countApplyAll" parameterType="com.bms.query.ApplyQuery" resultType="java.lang.Integer">
+    select count(id) from t_apply
+    <where>
+      <if test="towerNo != null">
+        tower_no = #{towerNo,jdbcType=INTEGER}
+      </if>
+      <if test="userName != null">
+        and user_name like concat('%',#{userName,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="roomNo != null">
+        and room_no like concat('%',#{roomNo,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="type != null">
+        and type = #{type,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+  <select id="selectByOldAndNewRoomNo" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"></include>
+    from t_apply
+    <where>
+        new_room_no = #{old,jdbcType=VARCHAR}
+       and room_no = #{new,jdbcType=VARCHAR}
+    </where>
+  </select>
+</mapper>

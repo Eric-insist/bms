@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bms.dao.BedRoomMapper">
+  <resultMap id="BaseResultMap" type="com.bms.model.BedRoom">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="room_no" jdbcType="VARCHAR" property="roomNo" />
+    <result column="tower_no" jdbcType="INTEGER" property="towerNo" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="room_man" jdbcType="VARCHAR" property="roomMan" />
+    <result column="real_person" jdbcType="INTEGER" property="realPerson" />
+    <result column="max_person" jdbcType="INTEGER" property="maxPerson" />
+    <result column="flag" jdbcType="TINYINT" property="flag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, room_no, tower_no, phone, room_man, real_person, max_person, flag, create_time, 
+    update_time, user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_room
+    where flag = 1 and id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_room
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bms.model.BedRoom">
+    insert into t_room (id, room_no, tower_no, user_id,
+      phone, room_man, real_person, 
+      max_person, flag, create_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{roomNo,jdbcType=VARCHAR}, #{towerNo,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER},
+      #{phone,jdbcType=VARCHAR}, #{roomMan,jdbcType=VARCHAR}, #{realPerson,jdbcType=INTEGER}, 
+      #{maxPerson,jdbcType=INTEGER}, #{flag,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bms.model.BedRoom">
+    insert into t_room
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="roomNo != null">
+        room_no,
+      </if>
+      <if test="towerNo != null">
+        tower_no,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="roomMan != null">
+        room_man,
+      </if>
+      <if test="realPerson != null">
+        real_person,
+      </if>
+      <if test="maxPerson != null">
+        max_person,
+      </if>
+      <if test="flag != null">
+        flag,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="roomNo != null">
+        #{roomNo,jdbcType=VARCHAR},
+      </if>
+      <if test="towerNo != null">
+        #{towerNo,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="roomMan != null">
+        #{roomMan,jdbcType=VARCHAR},
+      </if>
+      <if test="realPerson != null">
+        #{realPerson,jdbcType=INTEGER},
+      </if>
+      <if test="maxPerson != null">
+        #{maxPerson,jdbcType=INTEGER},
+      </if>
+      <if test="flag != null">
+        #{flag,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bms.model.BedRoom">
+    update t_room
+    <set>
+      <if test="roomNo != null">
+        room_no = #{roomNo,jdbcType=VARCHAR},
+      </if>
+      <if test="towerNo != null">
+        tower_no = #{towerNo,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="roomMan != null">
+        room_man = #{roomMan,jdbcType=VARCHAR},
+      </if>
+      <if test="realPerson != null">
+        real_person = #{realPerson,jdbcType=INTEGER},
+      </if>
+      <if test="maxPerson != null">
+        max_person = #{maxPerson,jdbcType=INTEGER},
+      </if>
+      <if test="flag != null">
+        flag = #{flag,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bms.model.BedRoom">
+    update t_room
+    set room_no = #{roomNo,jdbcType=VARCHAR},
+      tower_no = #{towerNo,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      phone = #{phone,jdbcType=VARCHAR},
+      room_man = #{roomMan,jdbcType=VARCHAR},
+      real_person = #{realPerson,jdbcType=INTEGER},
+      max_person = #{maxPerson,jdbcType=INTEGER},
+      flag = #{flag,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="findAll" parameterType="com.bms.query.BedRoomQuery" resultMap="BaseResultMap">
+    select * from t_room
+    <where>
+        flag
+      <if test="roomNo != null and roomNo != ''">
+        and room_no like CONCAT('%',#{roomNo,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="towerNo != null and towerNo != ''">
+        and tower_no = #{towerNo,jdbcType=INTEGER}
+      </if>
+    </where>
+    order by room_no
+    <if test="pageSize != null and pageStart != null">
+      limit #{pageStart,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+    </if>
+  </select>
+  <select id="countAll" parameterType="com.bms.query.BedRoomQuery" resultType="java.lang.Integer">
+    select count(id) from t_room
+    <where>
+      flag = 1
+      <if test="roomNo != null and roomNo != ''">
+        and room_no like CONCAT('%',#{roomNo,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="towerNo != null and towerNo != ''">
+        and tower_no = #{towerNo,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
+  <update id="updateflagById" parameterType="java.lang.Integer">
+    update t_room set flag = 0 where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByRoomNo" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from t_room
+    <where>
+      flag = 1
+      <if test="roomNo != null and roomNo != ''">
+        and room_no = #{roomNo,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
+  <insert id="insertByList" parameterType="java.util.List">
+    insert into t_room (id, room_no, tower_no, user_id,
+      phone, room_man, real_person,
+      max_person, flag, create_time,
+      update_time)
+    values
+    <foreach collection="list" item="item" index="index"
+             separator=",">
+    (#{item.id,jdbcType=INTEGER}, #{item.roomNo,jdbcType=VARCHAR}, #{item.towerNo,jdbcType=INTEGER}, #{item.userId,jdbcType=INTEGER},
+      #{item.phone,jdbcType=VARCHAR}, #{item.roomMan,jdbcType=VARCHAR}, #{item.realPerson,jdbcType=INTEGER},
+      #{item.maxPerson,jdbcType=INTEGER}, #{item.flag,jdbcType=TINYINT}, now(),
+      #{item.updateTime,jdbcType=TIMESTAMP})
+    </foreach>
+  </insert>
+</mapper>

@@ -1,0 +1,4 @@
+2020-02-08 14:36:38,106 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 13168 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-08 14:36:38,114 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-08 14:36:38,117 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-08 14:36:41,810 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 4.413 seconds (JVM running for 6.139)

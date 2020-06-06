@@ -1,0 +1,184 @@
+2020-02-17 09:50:36,605 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 12408 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-17 09:50:36,608 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-17 09:50:36,610 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-17 09:50:40,031 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 3.948 seconds (JVM running for 6.03)
+2020-02-17 09:51:02,444 [http-nio-8088-exec-5] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 09:51:02,655 [http-nio-8088-exec-5] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 09:51:02,831 [http-nio-8088-exec-5] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 09:51:02,835 [http-nio-8088-exec-5] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-17 09:51:02,835 [http-nio-8088-exec-5] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 09:51:02,836 [http-nio-8088-exec-5] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 09:51:02,838 [http-nio-8088-exec-5] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 09:51:02,838 [http-nio-8088-exec-5] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-17 09:51:02,841 [http-nio-8088-exec-5] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-17 09:51:02,852 [http-nio-8088-exec-5] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-17 09:51:07,017 [http-nio-8088-exec-10] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:51:07,018 [http-nio-8088-exec-10] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:51:07,036 [http-nio-8088-exec-10] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:51:07,037 [http-nio-8088-exec-10] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:51:07,037 [http-nio-8088-exec-10] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:51:07,059 [http-nio-8088-exec-10] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:51:09,763 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:51:09,765 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:51:09,771 [http-nio-8088-exec-2] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:51:09,772 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:51:09,772 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:51:09,779 [http-nio-8088-exec-2] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:51:52,270 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-17 09:51:52,283 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:51:52,287 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-17 09:51:52,288 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-17 09:51:52,289 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-17 09:51:52,291 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-17 09:52:20,319 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-17 09:52:20,319 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:52:20,321 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-17 09:52:20,322 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-17 09:52:20,322 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-17 09:52:20,323 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-17 09:52:22,122 [http-nio-8088-exec-7] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:52:22,122 [http-nio-8088-exec-7] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:52:22,126 [http-nio-8088-exec-7] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:52:22,128 [http-nio-8088-exec-7] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:52:22,128 [http-nio-8088-exec-7] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:52:22,138 [http-nio-8088-exec-7] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:53:37,857 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:53:37,857 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:53:37,869 [http-nio-8088-exec-3] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:53:37,871 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:53:37,872 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:53:37,874 [http-nio-8088-exec-3] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:53:39,003 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:53:39,004 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:53:39,006 [http-nio-8088-exec-1] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:53:39,007 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:53:39,009 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:53:39,014 [http-nio-8088-exec-1] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:53:39,633 [http-nio-8088-exec-10] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:53:39,635 [http-nio-8088-exec-10] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:53:39,639 [http-nio-8088-exec-10] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:53:39,639 [http-nio-8088-exec-10] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:53:39,640 [http-nio-8088-exec-10] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:53:39,645 [http-nio-8088-exec-10] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:53:39,873 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:53:39,874 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:53:39,879 [http-nio-8088-exec-3] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:53:39,881 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:53:39,883 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:53:39,887 [http-nio-8088-exec-3] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:53:40,069 [http-nio-8088-exec-7] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:53:40,069 [http-nio-8088-exec-7] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:53:40,071 [http-nio-8088-exec-7] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:53:40,072 [http-nio-8088-exec-7] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:53:40,072 [http-nio-8088-exec-7] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:53:40,075 [http-nio-8088-exec-7] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 09:53:40,250 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 09:53:40,250 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 09:53:40,252 [http-nio-8088-exec-1] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 09:53:40,253 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 09:53:40,254 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 09:53:40,255 [http-nio-8088-exec-1] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:11:58,300 [http-nio-8088-exec-1] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 10:11:58,301 [http-nio-8088-exec-1] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 10:11:58,306 [http-nio-8088-exec-1] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 10:11:58,307 [http-nio-8088-exec-1] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-17 10:11:58,307 [http-nio-8088-exec-1] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 10:11:58,307 [http-nio-8088-exec-1] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 10:11:58,309 [http-nio-8088-exec-1] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 10:11:58,309 [http-nio-8088-exec-1] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-17 10:11:58,310 [http-nio-8088-exec-1] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-17 10:11:58,311 [http-nio-8088-exec-1] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-17 10:12:03,067 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:12:03,068 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:12:03,071 [http-nio-8088-exec-2] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:12:03,073 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:12:03,074 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:12:03,083 [http-nio-8088-exec-2] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:13:59,820 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 14520 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-17 10:13:59,823 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-17 10:13:59,824 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-17 10:14:02,676 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 3.28 seconds (JVM running for 4.549)
+2020-02-17 10:14:09,724 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 10:14:09,824 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 10:14:09,846 [http-nio-8088-exec-7] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 10:14:09,852 [http-nio-8088-exec-7] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-17 10:14:09,853 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 10:14:09,854 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 10:14:09,856 [http-nio-8088-exec-7] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 10:14:09,857 [http-nio-8088-exec-7] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-17 10:14:09,859 [http-nio-8088-exec-7] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-17 10:14:09,861 [http-nio-8088-exec-7] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-17 10:14:10,545 [http-nio-8088-exec-10] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:14:10,546 [http-nio-8088-exec-10] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:14:10,554 [http-nio-8088-exec-10] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:14:10,556 [http-nio-8088-exec-10] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:14:10,557 [http-nio-8088-exec-10] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:14:10,560 [http-nio-8088-exec-10] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:14:20,893 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==>  Preparing: select * from t_room WHERE tower_no = ? limit ?,? 
+2020-02-17 10:14:20,894 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==> Parameters: 2(Integer), 0(Integer), 10(Integer)
+2020-02-17 10:14:20,899 [http-nio-8088-exec-2] DEBUG [findAll 145] - <==      Total: 2
+2020-02-17 10:14:20,902 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room WHERE tower_no = ? 
+2020-02-17 10:14:20,903 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==> Parameters: 2(Integer)
+2020-02-17 10:14:20,905 [http-nio-8088-exec-2] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:14:23,240 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==>  Preparing: select * from t_room WHERE tower_no = ? limit ?,? 
+2020-02-17 10:14:23,241 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==> Parameters: 1(Integer), 0(Integer), 10(Integer)
+2020-02-17 10:14:23,243 [http-nio-8088-exec-1] DEBUG [findAll 145] - <==      Total: 3
+2020-02-17 10:14:23,244 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room WHERE tower_no = ? 
+2020-02-17 10:14:23,244 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==> Parameters: 1(Integer)
+2020-02-17 10:14:23,251 [http-nio-8088-exec-1] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:14:26,040 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:14:26,041 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:14:26,043 [http-nio-8088-exec-3] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:14:26,044 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:14:26,044 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:14:26,050 [http-nio-8088-exec-3] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:15:16,689 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:15:16,690 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:15:16,703 [http-nio-8088-exec-3] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:15:16,707 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:15:16,708 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:15:16,711 [http-nio-8088-exec-3] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:15:18,704 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:15:18,705 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:15:18,711 [http-nio-8088-exec-2] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:15:18,715 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:15:18,717 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:15:18,722 [http-nio-8088-exec-2] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:15:27,557 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 10:15:27,557 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 10:15:27,560 [http-nio-8088-exec-7] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 10:15:27,561 [http-nio-8088-exec-7] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-17 10:15:27,561 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-17 10:15:27,561 [http-nio-8088-exec-7] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-17 10:15:27,562 [http-nio-8088-exec-7] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-17 10:15:27,563 [http-nio-8088-exec-7] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-17 10:15:27,563 [http-nio-8088-exec-7] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-17 10:15:27,566 [http-nio-8088-exec-7] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-17 10:15:27,694 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:15:27,695 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:15:27,697 [http-nio-8088-exec-2] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:15:27,699 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:15:27,700 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:15:27,706 [http-nio-8088-exec-2] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:15:30,143 [http-nio-8088-exec-9] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:15:30,143 [http-nio-8088-exec-9] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:15:30,145 [http-nio-8088-exec-9] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:15:30,146 [http-nio-8088-exec-9] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:15:30,147 [http-nio-8088-exec-9] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:15:30,155 [http-nio-8088-exec-9] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:15:40,236 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==>  Preparing: select * from t_room WHERE room_no like CONCAT('%',?,'%') limit ?,? 
+2020-02-17 10:15:40,248 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==> Parameters: 11(String), 0(Integer), 10(Integer)
+2020-02-17 10:15:40,265 [http-nio-8088-exec-2] DEBUG [findAll 145] - <==      Total: 3
+2020-02-17 10:15:40,268 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room WHERE room_no like CONCAT('%',?,'%') 
+2020-02-17 10:15:40,274 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==> Parameters: 11(String)
+2020-02-17 10:15:40,278 [http-nio-8088-exec-2] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:15:42,993 [http-nio-8088-exec-8] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-17 10:15:42,994 [http-nio-8088-exec-8] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-17 10:15:42,995 [http-nio-8088-exec-8] DEBUG [findAll 145] - <==      Total: 5
+2020-02-17 10:15:42,996 [http-nio-8088-exec-8] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-17 10:15:42,996 [http-nio-8088-exec-8] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-17 10:15:43,001 [http-nio-8088-exec-8] DEBUG [countAll 145] - <==      Total: 1
+2020-02-17 10:23:50,103 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 15252 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-17 10:23:50,108 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-17 10:23:50,109 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-17 10:23:53,498 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 4.088 seconds (JVM running for 5.42)

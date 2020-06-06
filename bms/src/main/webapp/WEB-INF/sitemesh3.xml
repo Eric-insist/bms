@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+    <!-- 指明满足“/*”的页面，将被“/WEB-INF/views/decorators/decorator.html”所装饰 -->
+    <!-- 装饰后台的数据 -->
+    <mapping path="/*" decorator="/WEB-INF/layouts/decorator.jsp" />
+
+    <!-- 指明满足“/exclude.jsp*”的页面，将被排除，不被装饰 -->
+    <!-- 排除json格式的数据 -->
+    <mapping path="**/json**" exclue="true" />
+    <mapping path="/image" exclue="true" />
+    <mapping path="/js" exclue="true" />
+    <mapping path="/login" exclue="true" />
+
+</sitemesh>

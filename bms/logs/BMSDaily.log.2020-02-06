@@ -1,0 +1,450 @@
+2020-02-06 15:21:18,817 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 9140 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-06 15:21:18,819 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-06 15:21:18,820 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-06 15:21:22,280 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 3.937 seconds (JVM running for 6.466)
+2020-02-06 15:21:32,003 [http-nio-8088-exec-4] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 15:21:32,156 [http-nio-8088-exec-4] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 15:21:32,252 [http-nio-8088-exec-4] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 15:21:32,256 [http-nio-8088-exec-4] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-06 15:21:32,256 [http-nio-8088-exec-4] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 15:21:32,256 [http-nio-8088-exec-4] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 15:21:32,258 [http-nio-8088-exec-4] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 15:21:32,259 [http-nio-8088-exec-4] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-06 15:21:32,263 [http-nio-8088-exec-4] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-06 15:21:32,268 [http-nio-8088-exec-4] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-06 15:21:34,930 [http-nio-8088-exec-7] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-06 15:21:34,932 [http-nio-8088-exec-7] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 15:21:34,951 [http-nio-8088-exec-7] DEBUG [findAll 145] - <==      Total: 5
+2020-02-06 15:21:34,954 [http-nio-8088-exec-7] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-06 15:21:34,955 [http-nio-8088-exec-7] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-06 15:21:34,982 [http-nio-8088-exec-7] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 16:14:32,577 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 8676 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-06 16:14:32,578 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-06 16:14:32,579 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-06 16:14:35,602 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 3.663 seconds (JVM running for 5.006)
+2020-02-06 16:17:27,845 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 16:17:27,978 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 16:17:28,005 [http-nio-8088-exec-6] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 16:17:28,010 [http-nio-8088-exec-6] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-06 16:17:28,010 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 16:17:28,011 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 16:17:28,013 [http-nio-8088-exec-6] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 16:17:28,013 [http-nio-8088-exec-6] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-06 16:17:28,015 [http-nio-8088-exec-6] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-06 16:17:28,020 [http-nio-8088-exec-6] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-06 16:17:30,185 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:17:30,194 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:17:30,198 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:17:30,199 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:17:30,201 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:17:30,209 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:18:53,958 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:18:53,960 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:18:53,964 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:18:53,965 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:18:53,966 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:18:53,971 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:19:38,229 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:19:38,230 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:19:38,232 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:19:38,233 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:19:38,233 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:19:38,238 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:20:01,913 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:20:01,913 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:20:01,915 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:20:01,916 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:20:01,916 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:20:01,917 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:05,865 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:05,866 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:05,868 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:05,872 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:05,874 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:05,879 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:30,110 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:30,111 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:30,116 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:30,117 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:30,117 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:30,120 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:30,765 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:30,765 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:30,768 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:30,772 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:30,773 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:30,776 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:30,960 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:30,960 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:30,963 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:30,966 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:30,967 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:30,973 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:31,183 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:31,184 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:31,190 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:31,192 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:31,193 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:31,197 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:31,376 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:31,376 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:31,379 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:31,380 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:31,380 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:31,381 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,082 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:32,083 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:32,085 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,087 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:32,088 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:32,090 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,507 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:32,508 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:32,510 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,512 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:32,512 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:32,515 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,696 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:32,696 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:32,698 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,698 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:32,699 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:32,699 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,859 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:21:32,860 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:21:32,864 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:21:32,865 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:21:32,865 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:21:32,866 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:00,163 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:22:00,164 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:22:00,166 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:00,167 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:22:00,167 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:22:00,174 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:21,984 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:22:21,985 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:22:21,992 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:21,993 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:22:21,993 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:22:21,997 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:22,179 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:22:22,179 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:22:22,181 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:22,181 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:22:22,181 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:22:22,182 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:22,518 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:22:22,518 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:22:22,523 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:22,525 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:22:22,526 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:22:22,529 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:25,828 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.account like CONCAT('%',?,'%') limit ?,? 
+2020-02-06 16:22:25,834 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==> Parameters: 1111(String), 0(Integer), 10(Integer)
+2020-02-06 16:22:25,840 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - <==      Total: 0
+2020-02-06 16:22:25,841 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.account like CONCAT('%',?,'%') 
+2020-02-06 16:22:25,843 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==> Parameters: 1111(String)
+2020-02-06 16:22:25,844 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:31,241 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:22:31,243 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:22:31,248 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:31,253 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:22:31,257 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:22:31,261 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:39,561 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.name like CONCAT('%',?,'%') limit ?,? 
+2020-02-06 16:22:39,563 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==> Parameters: 黄(String), 0(Integer), 10(Integer)
+2020-02-06 16:22:39,564 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:22:39,565 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.name like CONCAT('%',?,'%') 
+2020-02-06 16:22:39,566 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==> Parameters: 黄(String)
+2020-02-06 16:22:39,567 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 16:27:59,240 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 2800 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-06 16:27:59,244 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-06 16:27:59,246 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-06 16:28:02,547 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 3.823 seconds (JVM running for 4.882)
+2020-02-06 16:28:11,089 [http-nio-8088-exec-10] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 16:28:11,202 [http-nio-8088-exec-10] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 16:28:11,231 [http-nio-8088-exec-10] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 16:28:11,235 [http-nio-8088-exec-10] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-06 16:28:11,236 [http-nio-8088-exec-10] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 16:28:11,236 [http-nio-8088-exec-10] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 16:28:11,237 [http-nio-8088-exec-10] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 16:28:11,241 [http-nio-8088-exec-10] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-06 16:28:11,245 [http-nio-8088-exec-10] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-06 16:28:11,247 [http-nio-8088-exec-10] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-06 16:28:13,397 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 16:28:13,402 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 16:28:13,411 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 16:28:13,413 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 16:28:13,414 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 16:28:13,416 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:02:16,543 [http-nio-8088-exec-3] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 17:02:16,545 [http-nio-8088-exec-3] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 17:02:16,549 [http-nio-8088-exec-3] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 17:02:16,550 [http-nio-8088-exec-3] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-06 17:02:16,550 [http-nio-8088-exec-3] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 17:02:16,550 [http-nio-8088-exec-3] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 17:02:16,553 [http-nio-8088-exec-3] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 17:02:16,555 [http-nio-8088-exec-3] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-06 17:02:16,556 [http-nio-8088-exec-3] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-06 17:02:16,560 [http-nio-8088-exec-3] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-06 17:02:18,748 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:02:18,749 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:02:18,753 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:02:18,757 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:02:18,759 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:02:18,762 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:02:26,756 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.room_no like CONCAT('%',?,'%') limit ?,? 
+2020-02-06 17:02:26,766 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==> Parameters: 42(String), 0(Integer), 10(Integer)
+2020-02-06 17:02:26,771 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:02:26,775 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.room_no like CONCAT('%',?,'%') 
+2020-02-06 17:02:26,781 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==> Parameters: 42(String)
+2020-02-06 17:02:26,789 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:02:30,580 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.room_no like CONCAT('%',?,'%') limit ?,? 
+2020-02-06 17:02:30,596 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 4211(String), 0(Integer), 10(Integer)
+2020-02-06 17:02:30,598 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 0
+2020-02-06 17:02:30,599 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and t1.room_no like CONCAT('%',?,'%') 
+2020-02-06 17:02:30,600 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 4211(String)
+2020-02-06 17:02:30,601 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:04:07,428 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.id != ? limit ?,? 
+2020-02-06 17:04:07,430 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==> Parameters: 1(Integer), 0(Integer), 10(Integer)
+2020-02-06 17:04:07,434 [http-nio-8088-exec-3] DEBUG [findAll 145] - <==      Total: 3
+2020-02-06 17:04:07,435 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.id != ? 
+2020-02-06 17:04:07,438 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==> Parameters: 1(Integer)
+2020-02-06 17:04:07,444 [http-nio-8088-exec-3] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 17:05:01,385 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:05:01,385 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:05:01,389 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:01,392 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:05:01,393 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:05:01,398 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:13,813 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:05:13,814 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:05:13,818 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:13,819 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:05:13,820 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:05:13,824 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:14,534 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:05:14,534 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:05:14,536 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:14,537 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:05:14,538 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:05:14,540 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:14,952 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:05:14,953 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:05:14,957 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:14,960 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:05:14,961 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:05:14,963 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:15,194 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:05:15,195 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:05:15,201 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:15,201 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:05:15,202 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:05:15,206 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:15,716 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:05:15,717 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:05:15,724 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:05:15,726 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:05:15,727 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:05:15,729 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:06:03,534 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:06:03,534 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:06:03,536 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:06:03,536 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:06:03,537 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:06:03,541 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:07:26,177 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:07:26,178 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:07:26,184 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:07:26,184 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:07:26,185 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:07:26,186 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:07:34,050 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:07:34,050 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:07:34,051 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:07:34,052 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:07:34,052 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:07:34,053 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:07:42,860 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:07:42,861 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:07:42,868 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:07:42,869 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:07:42,870 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:07:42,876 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:07:56,932 [http-nio-8088-exec-8] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-06 17:07:56,935 [http-nio-8088-exec-8] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:07:56,945 [http-nio-8088-exec-8] DEBUG [findAll 145] - <==      Total: 5
+2020-02-06 17:07:56,946 [http-nio-8088-exec-8] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-06 17:07:56,947 [http-nio-8088-exec-8] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-06 17:07:56,963 [http-nio-8088-exec-8] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 17:08:04,178 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:08:04,179 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:08:04,183 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:08:04,184 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:08:04,184 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:08:04,186 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:08:06,712 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:08:06,713 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:08:06,718 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:08:06,719 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:08:06,719 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:08:06,720 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:09:04,126 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:09:04,127 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:09:04,132 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:09:04,133 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:09:04,133 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:09:04,135 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:09:28,172 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:09:28,174 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:09:28,178 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:09:28,179 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:09:28,179 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:09:28,183 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:10:36,254 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:10:36,255 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:10:36,260 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:10:36,262 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:10:36,263 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:10:36,264 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:10:47,514 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:10:47,515 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:10:47,518 [http-nio-8088-exec-9] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:10:47,519 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:10:47,519 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:10:47,520 [http-nio-8088-exec-9] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:11:31,480 [http-nio-8088-exec-7] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:11:31,480 [http-nio-8088-exec-7] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:11:31,484 [http-nio-8088-exec-7] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:11:31,485 [http-nio-8088-exec-7] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:11:31,485 [http-nio-8088-exec-7] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:11:31,486 [http-nio-8088-exec-7] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:08,206 [restartedMain] INFO  [BmsApplication 55] - Starting BmsApplication on DESKTOP-AKTCLIT with PID 20420 (E:\bms\target\classes started by 大帅帅的电脑 in E:\bms)
+2020-02-06 17:14:08,211 [restartedMain] DEBUG [BmsApplication 56] - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-06 17:14:08,212 [restartedMain] INFO  [BmsApplication 651] - No active profile set, falling back to default profiles: default
+2020-02-06 17:14:10,821 [restartedMain] INFO  [BmsApplication 61] - Started BmsApplication in 3.08 seconds (JVM running for 4.166)
+2020-02-06 17:14:27,502 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 17:14:27,610 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 17:14:27,637 [http-nio-8088-exec-6] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 17:14:27,640 [http-nio-8088-exec-6] INFO  [UserService 46] - 对用户[admin]进行登录验证..验证通过
+2020-02-06 17:14:27,641 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==>  Preparing: select * from t_user where account = ? and flag = 1 
+2020-02-06 17:14:27,642 [http-nio-8088-exec-6] DEBUG [findByCount 145] - ==> Parameters: admin(String)
+2020-02-06 17:14:27,646 [http-nio-8088-exec-6] DEBUG [findByCount 145] - <==      Total: 1
+2020-02-06 17:14:27,649 [http-nio-8088-exec-6] DEBUG [selectByPrimaryKey 145] - ==>  Preparing: select id, organ_name, short_name, path, parent_id, level, flag, create_time, update_time from t_organ where id = ? and flag = 1 
+2020-02-06 17:14:27,651 [http-nio-8088-exec-6] DEBUG [selectByPrimaryKey 145] - ==> Parameters: 1(Integer)
+2020-02-06 17:14:27,656 [http-nio-8088-exec-6] DEBUG [selectByPrimaryKey 145] - <==      Total: 1
+2020-02-06 17:14:30,956 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:14:30,964 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:14:30,970 [http-nio-8088-exec-1] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:30,970 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:14:30,971 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:14:30,973 [http-nio-8088-exec-1] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:36,935 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) limit ?,? 
+2020-02-06 17:14:36,945 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 125(String), 125(String), 125(String), 0(Integer), 10(Integer)
+2020-02-06 17:14:36,950 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:36,951 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) 
+2020-02-06 17:14:36,953 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 125(String), 125(String), 125(String)
+2020-02-06 17:14:36,954 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:41,107 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) limit ?,? 
+2020-02-06 17:14:41,108 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 1257(String), 1257(String), 1257(String), 0(Integer), 10(Integer)
+2020-02-06 17:14:41,114 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 0
+2020-02-06 17:14:41,116 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) 
+2020-02-06 17:14:41,117 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 1257(String), 1257(String), 1257(String)
+2020-02-06 17:14:41,118 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:44,005 [http-nio-8088-exec-7] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:14:44,006 [http-nio-8088-exec-7] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:14:44,012 [http-nio-8088-exec-7] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:44,016 [http-nio-8088-exec-7] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:14:44,017 [http-nio-8088-exec-7] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:14:44,024 [http-nio-8088-exec-7] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:49,388 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) limit ?,? 
+2020-02-06 17:14:49,389 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==> Parameters: 成都(String), 成都(String), 成都(String), 0(Integer), 10(Integer)
+2020-02-06 17:14:49,394 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:49,396 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) 
+2020-02-06 17:14:49,399 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==> Parameters: 成都(String), 成都(String), 成都(String)
+2020-02-06 17:14:49,404 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:53,688 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) limit ?,? 
+2020-02-06 17:14:53,689 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - ==> Parameters: 四川(String), 四川(String), 四川(String), 0(Integer), 10(Integer)
+2020-02-06 17:14:53,697 [http-nio-8088-exec-8] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:14:53,699 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) 
+2020-02-06 17:14:53,701 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - ==> Parameters: 四川(String), 四川(String), 四川(String)
+2020-02-06 17:14:53,705 [http-nio-8088-exec-8] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:15:01,883 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) limit ?,? 
+2020-02-06 17:15:01,886 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - ==> Parameters: 高新(String), 高新(String), 高新(String), 0(Integer), 10(Integer)
+2020-02-06 17:15:01,890 [http-nio-8088-exec-5] DEBUG [findStudentAll 145] - <==      Total: 0
+2020-02-06 17:15:01,894 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 and (t1.phone like CONCAT('%',?,'%') or t1.id_card like CONCAT('%',?,'%') or t1.home like CONCAT('%',?,'%') ) 
+2020-02-06 17:15:01,895 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - ==> Parameters: 高新(String), 高新(String), 高新(String)
+2020-02-06 17:15:01,897 [http-nio-8088-exec-5] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:15:04,555 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:15:04,556 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:15:04,561 [http-nio-8088-exec-10] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:15:04,565 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:15:04,567 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:15:04,572 [http-nio-8088-exec-10] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:15:13,043 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:15:13,045 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:15:13,049 [http-nio-8088-exec-6] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:15:13,052 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:15:13,054 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:15:13,056 [http-nio-8088-exec-6] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:15:17,218 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.id != ? limit ?,? 
+2020-02-06 17:15:17,221 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==> Parameters: 1(Integer), 0(Integer), 10(Integer)
+2020-02-06 17:15:17,224 [http-nio-8088-exec-1] DEBUG [findAll 145] - <==      Total: 3
+2020-02-06 17:15:17,227 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.id != ? 
+2020-02-06 17:15:17,230 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==> Parameters: 1(Integer)
+2020-02-06 17:15:17,232 [http-nio-8088-exec-1] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 17:35:25,465 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:35:25,465 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:35:25,470 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:35:25,472 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:35:25,473 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:35:25,477 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:35:29,708 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:35:29,708 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:35:29,711 [http-nio-8088-exec-2] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:35:29,712 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:35:29,712 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:35:29,713 [http-nio-8088-exec-2] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 17:35:32,428 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 17:35:32,429 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 17:35:32,430 [http-nio-8088-exec-4] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 17:35:32,432 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 17:35:32,432 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 17:35:32,435 [http-nio-8088-exec-4] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 18:01:40,918 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==>  Preparing: select t1.*,t2.organ_name as organName,t2.parent_name as parentName from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 limit ?,? 
+2020-02-06 18:01:40,920 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 18:01:40,941 [http-nio-8088-exec-3] DEBUG [findStudentAll 145] - <==      Total: 1
+2020-02-06 18:01:40,942 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==>  Preparing: select count(t1.id) from t_user t1 left join t_organ t2 on t1.organ_id = t2.id WHERE t1.flag = 1 and t2.flag = 1 and t1.role_id = 4 
+2020-02-06 18:01:40,942 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - ==> Parameters: 
+2020-02-06 18:01:40,943 [http-nio-8088-exec-3] DEBUG [countStudentAll 145] - <==      Total: 1
+2020-02-06 18:01:42,632 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-06 18:01:42,637 [http-nio-8088-exec-2] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 18:01:42,640 [http-nio-8088-exec-2] DEBUG [findAll 145] - <==      Total: 5
+2020-02-06 18:01:42,640 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-06 18:01:42,641 [http-nio-8088-exec-2] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-06 18:01:42,646 [http-nio-8088-exec-2] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 18:01:47,702 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-06 18:01:47,703 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 18:01:47,708 [http-nio-8088-exec-1] DEBUG [findAll 145] - <==      Total: 5
+2020-02-06 18:01:47,709 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-06 18:01:47,709 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-06 18:01:47,718 [http-nio-8088-exec-1] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 18:01:48,973 [http-nio-8088-exec-8] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-06 18:01:48,973 [http-nio-8088-exec-8] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 18:01:48,975 [http-nio-8088-exec-8] DEBUG [findAll 145] - <==      Total: 5
+2020-02-06 18:01:48,975 [http-nio-8088-exec-8] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-06 18:01:48,976 [http-nio-8088-exec-8] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-06 18:01:48,978 [http-nio-8088-exec-8] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 18:01:51,686 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-06 18:01:51,687 [http-nio-8088-exec-3] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 18:01:51,692 [http-nio-8088-exec-3] DEBUG [findAll 145] - <==      Total: 5
+2020-02-06 18:01:51,692 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-06 18:01:51,692 [http-nio-8088-exec-3] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-06 18:01:51,699 [http-nio-8088-exec-3] DEBUG [countAll 145] - <==      Total: 1
+2020-02-06 18:01:53,410 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==>  Preparing: select * from t_room limit ?,? 
+2020-02-06 18:01:53,410 [http-nio-8088-exec-1] DEBUG [findAll 145] - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-06 18:01:53,413 [http-nio-8088-exec-1] DEBUG [findAll 145] - <==      Total: 5
+2020-02-06 18:01:53,415 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==>  Preparing: select count(id) from t_room 
+2020-02-06 18:01:53,415 [http-nio-8088-exec-1] DEBUG [countAll 145] - ==> Parameters: 
+2020-02-06 18:01:53,421 [http-nio-8088-exec-1] DEBUG [countAll 145] - <==      Total: 1

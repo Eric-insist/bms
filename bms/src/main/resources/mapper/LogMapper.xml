@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bms.dao.LogMapper" >
+  <resultMap id="BaseResultMap" type="com.bms.model.Log" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="TINYINT" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="organ_id" property="organId" jdbcType="INTEGER" />
+    <result column="organ_code" property="organCode" jdbcType="VARCHAR" />
+    <result column="organ_name" property="organName" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.bms.model.Log" extends="BaseResultMap" >
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, user_name, type, time, organ_id, organ_code, organ_name
+  </sql>
+  <sql id="Blob_Column_List" >
+    description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_log
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bms.model.Log" >
+    insert into t_log (id, user_id, user_name, 
+      type, time, organ_id, 
+      organ_code, organ_name, description
+      )
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, 
+      #{type,jdbcType=TINYINT}, #{time,jdbcType=TIMESTAMP}, #{organId,jdbcType=INTEGER}, 
+      #{organCode,jdbcType=VARCHAR}, #{organName,jdbcType=VARCHAR}, #{description,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.bms.model.Log" >
+    insert into t_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="organId != null" >
+        organ_id,
+      </if>
+      <if test="organCode != null" >
+        organ_code,
+      </if>
+      <if test="organName != null" >
+        organ_name,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=TINYINT},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="organId != null" >
+        #{organId,jdbcType=INTEGER},
+      </if>
+      <if test="organCode != null" >
+        #{organCode,jdbcType=VARCHAR},
+      </if>
+      <if test="organName != null" >
+        #{organName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bms.model.Log" >
+    update t_log
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null" >
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=TINYINT},
+      </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="organId != null" >
+        organ_id = #{organId,jdbcType=INTEGER},
+      </if>
+      <if test="organCode != null" >
+        organ_code = #{organCode,jdbcType=VARCHAR},
+      </if>
+      <if test="organName != null" >
+        organ_name = #{organName,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.bms.model.Log" >
+    update t_log
+    set user_id = #{userId,jdbcType=INTEGER},
+      user_name = #{userName,jdbcType=VARCHAR},
+      type = #{type,jdbcType=TINYINT},
+      time = #{time,jdbcType=TIMESTAMP},
+      organ_id = #{organId,jdbcType=INTEGER},
+      organ_code = #{organCode,jdbcType=VARCHAR},
+      organ_name = #{organName,jdbcType=VARCHAR},
+      description = #{description,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bms.model.Log" >
+    update t_log
+    set user_id = #{userId,jdbcType=INTEGER},
+      user_name = #{userName,jdbcType=VARCHAR},
+      type = #{type,jdbcType=TINYINT},
+      time = #{time,jdbcType=TIMESTAMP},
+      organ_id = #{organId,jdbcType=INTEGER},
+      organ_code = #{organCode,jdbcType=VARCHAR},
+      organ_name = #{organName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="findAll" parameterType="com.bms.query.LogQuery" resultMap="BaseResultMap">
+    SELECT t1.id,t1.user_id,t1.description,t1.type,t1.time,t1.organ_id,t2.name as userName,t3.organ_name as organName FROM t_log t1 LEFT JOIN t_user t2 on t1.user_id = t2.id LEFT JOIN t_organ t3 on t2.organ_id = t3.id
+    <where>
+      <if test="type != null and type != ''">
+        type = #{type,jdbcType=TINYINT}
+      </if>
+      <if test="userName != null and userName != ''">
+       and t2.name like concat('%',#{userName,jdbcType=VARCHAR},'%')
+      </if>
+    </where>
+    order by time desc
+    <if test="pageSize !=null and pageStart != null">
+      limit #{pageStart,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+    </if>
+  </select>
+
+  <select id="countAll" parameterType="com.bms.query.LogQuery" resultType="java.lang.Integer">
+    SELECT count(t1.id) FROM t_log t1 LEFT JOIN t_user t2 on t1.user_id = t2.id LEFT JOIN t_organ t3 on t2.organ_id = t3.id
+    <where>
+      <if test="type != null and type != ''">
+        type = #{type,jdbcType=TINYINT}
+      </if>
+      <if test="userName != null and userName != ''">
+        and t2.name like concat('%',#{userName,jdbcType=VARCHAR},'%')
+      </if>
+    </where>
+    order by time desc
+  </select>
+</mapper>

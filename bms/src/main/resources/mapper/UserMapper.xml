@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bms.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.bms.model.User">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="account" jdbcType="VARCHAR" property="account"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="salt" jdbcType="VARCHAR" property="salt"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result column="sex" jdbcType="INTEGER" property="sex"/>
+        <result column="id_card" jdbcType="VARCHAR" property="idCard"/>
+        <result column="organ_id" jdbcType="INTEGER" property="organId"/>
+        <result column="organ_name" jdbcType="VARCHAR" property="organName"/>
+        <result column="parent_name" jdbcType="VARCHAR" property="parentName"/>
+        <result column="student_class" jdbcType="VARCHAR" property="studentClass"/>
+        <result column="room_id" jdbcType="INTEGER" property="roomId"/>
+        <result column="room_no" jdbcType="VARCHAR" property="roomNo"/>
+        <result column="in_date" jdbcType="DATE" property="inDate"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="home" jdbcType="VARCHAR" property="home"/>
+        <result column="live_place" jdbcType="VARCHAR" property="livePlace"/>
+        <result column="flag" jdbcType="TINYINT" property="flag"/>
+        <result column="role_id" jdbcType="INTEGER" property="roleId"/>
+        <result column="tower_no" jdbcType="INTEGER" property="towerNo"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, account, password, salt, name, age, sex, id_card, organ_id, organ_name, student_class, 
+    room_id, in_date, phone, home,live_place, flag, role_id,tower_no, create_time, update_time
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_user
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.bms.model.User">
+    insert into t_user (id, account, password, 
+      salt, name, age, sex, 
+      id_card, organ_id, organ_name, 
+      student_class, room_id, in_date,
+      phone, home,live_place, flag,
+      role_id,tower_no, create_time, update_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{salt,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{sex,jdbcType=INTEGER},
+      #{idCard,jdbcType=VARCHAR}, #{organId,jdbcType=INTEGER}, #{organName,jdbcType=VARCHAR}, 
+      #{studentClass,jdbcType=VARCHAR}, #{roomId,jdbcType=INTEGER}, #{inDate,jdbcType=DATE},
+      #{phone,jdbcType=VARCHAR}, #{home,jdbcType=VARCHAR}, #{livePlace,jdbcType=VARCHAR}, #{flag,jdbcType=TINYINT},
+      #{roleId,jdbcType=INTEGER},#{towerNo,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.bms.model.User">
+        insert into t_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="salt != null">
+                salt,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="age != null">
+                age,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="idCard != null">
+                id_card,
+            </if>
+            <if test="organId != null">
+                organ_id,
+            </if>
+            <if test="organName != null">
+                organ_name,
+            </if>
+            <if test="studentClass != null">
+                student_class,
+            </if>
+            <if test="roomId != null">
+                room_id,
+            </if>
+            <if test="inDate != null">
+                in_date,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="home != null">
+                home,
+            </if>
+            <if test="livePlace != null">
+                live_place,
+            </if>
+            <if test="flag != null">
+                flag,
+            </if>
+            <if test="roleId != null">
+                role_id,
+            </if>
+            <if test="towerNo != null">
+                tower_no,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="salt != null">
+                #{salt,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="age != null">
+                #{age,jdbcType=INTEGER},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="idCard != null">
+                #{idCard,jdbcType=VARCHAR},
+            </if>
+            <if test="organId != null">
+                #{organId,jdbcType=INTEGER},
+            </if>
+            <if test="organName != null">
+                #{organName,jdbcType=VARCHAR},
+            </if>
+            <if test="studentClass != null">
+                #{studentClass,jdbcType=VARCHAR},
+            </if>
+            <if test="roomId != null">
+                #{roomId,jdbcType=INTEGER},
+            </if>
+            <if test="inDate != null">
+                #{inDate,jdbcType=DATE},
+            </if>
+            <if test="phone != null">
+                #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="home != null">
+                #{home,jdbcType=VARCHAR},
+            </if>
+            <if test="livePlace != null">
+                #{livePlace,jdbcType=VARCHAR},
+            </if>
+            <if test="flag != null">
+                #{flag,jdbcType=TINYINT},
+            </if>
+            <if test="roleId != null">
+                #{roleId,jdbcType=INTEGER},
+            </if>
+            <if test="towerNo != null">
+                #{towerNo,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.bms.model.User">
+        update t_user
+        <set>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="salt != null">
+                salt = #{salt,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="age != null">
+                age = #{age,jdbcType=INTEGER},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="idCard != null">
+                id_card = #{idCard,jdbcType=VARCHAR},
+            </if>
+            <if test="organId != null">
+                organ_id = #{organId,jdbcType=INTEGER},
+            </if>
+            <if test="organName != null">
+                organ_name = #{organName,jdbcType=VARCHAR},
+            </if>
+            <if test="studentClass != null">
+                student_class = #{studentClass,jdbcType=VARCHAR},
+            </if>
+            <if test="roomId != null">
+                room_id = #{roomId,jdbcType=INTEGER},
+            </if>
+            <if test="inDate != null">
+                in_date = #{inDate,jdbcType=DATE},
+            </if>
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="home != null">
+                home = #{home,jdbcType=VARCHAR},
+            </if>
+            <if test="livePlace != null">
+                live_place = #{livePlace,jdbcType=VARCHAR},
+            </if>
+            <if test="flag != null">
+                flag = #{flag,jdbcType=TINYINT},
+            </if>
+            <if test="roleId != null">
+                role_id = #{roleId,jdbcType=INTEGER},
+            </if>
+            <if test="towerNo != null">
+                tower_no = #{towerNo,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.bms.model.User">
+    update t_user
+    set account = #{account,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      salt = #{salt,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=INTEGER},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      organ_id = #{organId,jdbcType=INTEGER},
+      organ_name = #{organName,jdbcType=VARCHAR},
+      student_class = #{studentClass,jdbcType=VARCHAR},
+      room_id = #{roomId,jdbcType=INTEGER},
+      in_date = #{inDate,jdbcType=DATE},
+      phone = #{phone,jdbcType=VARCHAR},
+      home = #{home,jdbcType=VARCHAR},
+      live_place = #{livePlace,jdbcType=VARCHAR},
+      flag = #{flag,jdbcType=TINYINT},
+      role_id = #{roleId,jdbcType=INTEGER},
+      tower_no = #{towerNo,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <select id="findByCount" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select * from t_user where account = #{count,jdbcType=VARCHAR} and flag = 1
+  </select>
+
+    <select id="findAll" parameterType="com.bms.query.UserQuery" resultMap="BaseResultMap">
+        select t1.*,t2.organ_name as organName
+        from t_user t1 left join t_organ t2 on t1.organ_id = t2.id
+        <where>
+            t1.flag = 1 and t2.flag = 1
+            <if test="roleId != null">
+                and role_id = #{roleId,jdbcType=INTEGER}
+            </if>
+            <if test="search != null and search != ''">
+                and (t1.account like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.name like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.phone like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.organ_name like CONCAT('%',#{search,jdbcType=VARCHAR},'%'))
+            </if>
+            <if test="id != null">
+                and t1.id != #{id,jdbcType=INTEGER}
+            </if>
+        </where>
+        order by role_id
+        <if test="pageSize != null and pageStart != null">
+            limit #{pageStart,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+        </if>
+    </select>
+
+    <select id="countAll" parameterType="com.bms.query.UserQuery" resultType="java.lang.Integer">
+        select count(t1.id)
+        from t_user t1 left join t_organ t2 on t1.organ_id = t2.id
+        <where>
+            t1.flag = 1 and t2.flag = 1
+            <if test="roleId != null">
+                and role_id = #{roleId,jdbcType=INTEGER}
+            </if>
+            <if test="search != null and search != ''">
+                and (t1.account like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.name like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.phone like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.organ_name like CONCAT('%',#{search,jdbcType=VARCHAR},'%'))
+            </if>
+            <if test="id != null">
+                and t1.id != #{id,jdbcType=INTEGER}
+            </if>
+        </where>
+        order by role_id
+    </select>
+
+    <select id="findStudentAll" parameterType="com.bms.query.UserQuery" resultMap="BaseResultMap">
+        select t1.*,t2.organ_name as organName,t2.parent_name as parentName,t3.room_no as roomNo
+        from t_room t3 left join t_user t1 on t3.id = t1.room_id left join t_organ t2 on t1.organ_id = t2.id
+        <where>
+            t1.flag = 1 and t2.flag = 1 and t3.flag = 1 and t1.role_id = 4
+            <if test="account != null and account != ''">
+                and t1.account like CONCAT('%',#{account,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="name != null and name != ''">
+                and t1.name like CONCAT('%',#{name,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="roomNo != null and roomNo != ''">
+                and t3.room_no like CONCAT('%',#{roomNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="organId != null and organId != ''">
+                and t1.organ_id in (select id from t_organ where parent_id = #{organId,jdbcType=INTEGER})
+            </if>
+            <if test="search != null and search != ''">
+                and (t1.phone like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.id_card like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.home like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                )
+            </if>
+        </where>
+        <if test="pageSize != null and pageStart != null">
+            limit #{pageStart,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+        </if>
+    </select>
+
+    <select id="countStudentAll" parameterType="com.bms.query.UserQuery" resultType="java.lang.Integer">
+        select count(t1.id)
+        from t_room t3 left join t_user t1 on t3.id = t1.room_id left join t_organ t2 on t1.organ_id = t2.id
+        <where>
+            t1.flag = 1 and t2.flag = 1 and t3.flag = 1 and t1.role_id = 4
+            <if test="account != null and account != ''">
+                and t1.account like CONCAT('%',#{account,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="name != null and name != ''">
+                and t1.name like CONCAT('%',#{name,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="roomNo != null and roomNo != ''">
+                and t3.room_no like CONCAT('%',#{roomNo,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="organId != null and organId != ''">
+                and t1.organ_id in (select id from t_organ where parent_id = #{organId,jdbcType=INTEGER})
+            </if>
+            <if test="search != null and search != ''">
+                and (t1.phone like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.id_card like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                or t1.home like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+                )
+            </if>
+        </where>
+    </select>
+    <select id="selectByPassword" resultType="java.lang.Integer">
+        select count(id) from
+        t_user
+        <where>
+            <if test="password != null ">
+                password = #{password,jdbcType=VARCHAR}
+            </if>
+            <if test="id != null">
+                and id = #{id,jdbcType=INTEGER}
+            </if>
+        </where>
+    </select>
+    <update id="updatePassword" parameterType="com.bms.model.User">
+        update t_user
+        <set>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR}
+            </if>
+        </set>
+        <where>
+            <if test="id != null">
+                id = #{id,jdbcType=INTEGER}
+            </if>
+        </where>
+    </update>
+
+    <update id="updateFlag" parameterType="com.bms.model.User">
+        update t_user
+        <set>
+            flag = 0
+        </set>
+        <where>
+            <if test="id != null">
+                id = #{id,jdbcType=INTEGER}
+            </if>
+        </where>
+    </update>
+    <update id="updateFlagByList" parameterType="java.util.List">
+        update t_user
+        <set>
+            flag = 0
+        </set>
+        where
+        <foreach collection="list" separator="or" item="i" index="index">
+            id=#{i,jdbcType=INTEGER}
+        </foreach>
+    </update>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select account,id_card,phone
+        from t_user where id != 1 and flag = 1
+    </select>
+</mapper>
